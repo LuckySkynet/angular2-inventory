@@ -1,0 +1,5 @@
+<!--注意：这里不能使用 src="{{ product.imageUrl }}"的方式
+    因为：如果浏览器在angular运行之前加载，则无法识别{{product.imageUrl}}，并且抛出404页面。
+    而使用[src]则告诉浏览器使用angular的input属性进行绑定。
+-->
+<img class="product-image" [src]="product.imageUrl">
